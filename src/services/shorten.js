@@ -1,7 +1,7 @@
 import randomstring from 'randomstring'
 import RedisClient from '../redis-client'
 
-const { REDIS_URL, REDIS_PORT } = process.env
+const { REDIS_URL } = process.env
 
 class ShortnerService {
   constructor (redisClient) {
@@ -26,4 +26,4 @@ class ShortnerService {
   }
 }
 
-export default new ShortnerService(new RedisClient(REDIS_URL, REDIS_PORT))
+export default new ShortnerService(new RedisClient(REDIS_URL))

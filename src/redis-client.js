@@ -2,8 +2,8 @@ import { promisify } from 'util'
 import redis from 'redis'
 
 class RedisClient {
-  constructor (hostname, port) {
-    this.client = redis.createClient(port, hostname)
+  constructor (urlConnection) {
+    this.client = redis.createClient(urlConnection)
     this.setupRedisWithPromises()
   }
 

@@ -26,11 +26,10 @@ docker build -t compressly_web .
 ```
 
 ```bash
-docker run -p 8080:8080 -e REDIS_URL=REDIS_HOST_HERE -e REDIS_PORT=REDIS_PORT_HERE -e PORT=PORT_HERE compressly_web:latest
+docker run -p 8080:8080 -e REDIS_URL=REDIS_HOST_HERE -e PORT=PORT_HERE compressly_web:latest
 ```
 
 ## Enviroment variables
 
 - `REDIS_URL` [**required**] Redis Host
-- `REDIS_PORT` [**required**] Redis Port
 - `PORT` [**optional**] Port which Express will run
