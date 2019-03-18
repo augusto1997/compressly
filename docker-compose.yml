@@ -1,15 +1,19 @@
-version: '3.6'
+version: "3.6"
 services:
   redis:
-    image: 'redis'
+    image: "redis"
     restart: unless-stopped
+    ports:
+      - "6379:6379"
   web:
     build: .
     links:
-      - 'redis:redis'
+      - "redis:redis"
     depends_on:
-      - 'redis'
+      - "redis"
     restart: on-failure
     ports:
-      - '8080:8080'
+      - "8080:8080"
     env_file: .env
+    volumes:
+      - ./webapp:/opt/webapp

@@ -26,11 +26,11 @@
   "main": "src/server.js",
   "license": "MIT",
   "scripts": {
-    "build": "yarn run clean && babel src -d dist --ignore 'src/public/**/*.js'",
+    "build": "npm run clean && babel src -d dist --ignore 'src/public/**/*.js'",
     "copy:views": "cp -r src/views dist/views",
     "copy:public": "cp -r src/public dist/public",
     "start:dev": "nodemon --exec babel-node src/server.js",
-    "start": "yarn run copy:views && yarn run copy:public && node dist/server.js",
+    "start": "npm run copy:views && npm run copy:public && node dist/server.js",
     "test": "jest",
     "clean": "rm -rf dist/*"
   },
