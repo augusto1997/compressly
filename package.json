@@ -1,0 +1,66 @@
+{
+  "name": "url-shortner-api",
+  "description": "A simple Express Web Application for shorten URL",
+  "author": {
+    "name": "Augusto Cezar",
+    "email": "augusto_cezar_1997@hotmail.com"
+  },
+  "keywords": [
+    "url",
+    "shorten",
+    "api"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/augusto1997/compressly.git"
+  },
+  "homepage": "https://github.com/augusto1997/compressly",
+  "engines": {
+    "node": ">=10.x"
+  },
+  "bugs": {
+    "url": "https://github.com/augusto1997/compressly/issues",
+    "email": "augusto_cezar_1997@hotmail.com"
+  },
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn run clean && babel src -d dist --ignore 'src/public/**/*.js'",
+    "copy:views": "cp -r src/views dist/views",
+    "copy:public": "cp -r src/public dist/public",
+    "start:dev": "nodemon --exec babel-node src/server.js",
+    "start": "yarn run copy:views && yarn run copy:public && node dist/server.js",
+    "test": "jest",
+    "clean": "rm -rf dist/*"
+  },
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-boom": "^3.0.0",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.3",
+    "randomstring": "^1.1.5",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-transform-async-to-generator": "^7.3.4",
+    "@babel/plugin-transform-regenerator": "^7.3.4",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.4",
+    "eslint": "^5.15.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.3.1",
+    "nodemon": "^1.18.10",
+    "prettier-eslint": "^8.8.2",
+    "supertest": "^4.0.0"
+  }
+}

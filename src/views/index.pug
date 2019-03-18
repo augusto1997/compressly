@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Compressly
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=PT+Sans|Work+Sans")
+    link(rel="stylesheet", href="css/loading.css")
+    link(rel="stylesheet", href="css/style.css")
+  body
+    .container
+      h1.brand__title Compressly
+      p.description "compressly" is a simple link shortner service...
+      .container__item
+        form.form(method="POST", id="form")
+          input.form__field(type='text', placeholder='Paste the url here ...', name="url")
+          button.btn.btn--primary.btn--inside.ld-over-inverse.uppercase(type='submit', id="button")
+            | Go
+            span.ld.ld-ball.ld-bounce              
+      .container__item.container__item--bottom
+        p.repository
+          | Check out this project on
+          a(href='https://github.com/augusto1997/compressly', target='_blank') Github     
+    script(src="js/script.js")
