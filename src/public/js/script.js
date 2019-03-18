@@ -37,7 +37,7 @@ function resetFormBehaviour () {
 }
 
 async function getGeneratedURL (link) {
-  const response = await window.fetch('http://localhost:8080/', {
+  const response = await window.fetch('/', {
     method: 'Post',
     body: JSON.stringify({ link }),
     headers: { 'content-type': 'application/json' }
